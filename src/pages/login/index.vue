@@ -1,6 +1,6 @@
 <template>
   <div class="login-card">
-    <main class="login-content">1</main>
+    <common-form />
     <aside class="login-aside">
       <div class="login-aside-overlay"></div>
       <h1 class="login-welcome-text">
@@ -12,8 +12,13 @@
 </template>
 
 <script>
+import CommonForm from "./common-form.vue";
 export default {
   name: "Login",
+  components: {
+    CommonForm,
+  },
+  methods: {},
 };
 </script>
 
@@ -29,15 +34,8 @@ export default {
     border-radius: 10px;
     background-color: #fff;
   }
-  &-content {
-    height: 100%;
-    display: flex;
-    flex: 2 2;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   &-aside {
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
